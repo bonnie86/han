@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+/*
+============================
+Reset
+============================
+*/
+html,body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,table,th,td,form,fieldset,legend,input,textarea,button,select { margin:0;padding:0;box-sizing:border-box;}
+body { font-family: "Spoqa Han Sans Neo", "Pretendard", "NotoSansKR", sans-serif; color: #1f1f1f
+    ; font-weight: 400; letter-spacing: -0.025em; line-height: 1.4; -webkit-text-size-adjust: none;  }
+html,body { font-size: 16px;}
+h1,h2,h3,h4,h5,h6,strong,p,span,i { margin: 0; font-size: 100%; line-height: 1; -webkit-margin-after: 0; margin-block-end: 0; -webkit-margin-before: 0; margin-block-start: 0;}
+select,button,input,textarea,pre { font-family: "Spoqa Han Sans Neo", "Pretendard", "NotoSansKR", sans-serif; font-size: 16px; color: #333; letter-spacing: -0.025em; line-height: 1; -webkit-font-smoothing: antialiased;  -moz-osx-font-smoothing: grayscale;}
+pre { white-space: pre-wrap;}
+fieldset,img,button { border: 0;}
+img,input,button { vertical-align: top;}
+img { display: block; max-width: 100%; width: auto; border:0;}
+table { width: 100%; border-collapse: collapse; border-spacing: 0; word-break: break-all; word-wrap: break-word;}
+address,em { font-style: normal;}
+ol,ul,li { list-style: none;}
+hr { display: none;}
+a { text-decoration: none; color: inherit; cursor: pointer;}
+a:hover,a:active { text-decoration: none; cursor: pointer;}
+legend { position: absolute; left: -9999px; top: 0;}
+caption { overflow: hidden; width: 0; height: 0; font-size: 0; line-height: 0;}
+button { border:0; background: none; cursor: pointer; transition: all 0.1s; -webkit-apperance: none;}
+button::-moz-focus-inner { padding: 0; border: 0; cursor: pointer;}
+textarea { resize: none;}
+* { box-sizing: border-box;}
+.blind { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; text-indent: 100%; white-space: nowrap; overflow: hidden;}
+
+/*
+============================
+Skip Navigation
+============================
+*/
+#skipNav { color: #fff; position: absolute; left: 0; top: 0; width: 150px; z-index: 1000; text-align: center;}
+#skipNav a { opacity: 0; position: absolute; left: 0; top: 0; display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.6); transform: translateY(-100%); transition: 0.3s; font-size: 14px;}
+#skipNav a:focus, #skipNav a:hover { opacity: 1; transform: translateY(0);}
+
