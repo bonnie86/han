@@ -6,9 +6,9 @@ Reset
 ============================
 */
 html,body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,table,th,td,form,fieldset,legend,input,textarea,button,select { margin:0;padding:0;box-sizing:border-box;}
-body { font-family: "Spoqa Han Sans Neo", "Pretendard", "NotoSansKR", sans-serif; color: #1f1f1f
+body { font-family: "Spoqa Han Sans Neo", "Pretendard", "NotoSansKR", sans-serif; color: #434343
     ; font-weight: 400; letter-spacing: -0.025em; line-height: 1.4; -webkit-text-size-adjust: none;  }
-html,body { font-size: 16px;}
+html,body { font-size: 1rem;}
 h1,h2,h3,h4,h5,h6,strong,p,span,i { margin: 0; font-size: 100%; line-height: 1; -webkit-margin-after: 0; margin-block-end: 0; -webkit-margin-before: 0; margin-block-start: 0;}
 select,button,input,textarea,pre { font-family: "Spoqa Han Sans Neo", "Pretendard", "NotoSansKR", sans-serif; font-size: 16px; color: #333; letter-spacing: -0.025em; line-height: 1; -webkit-font-smoothing: antialiased;  -moz-osx-font-smoothing: grayscale;}
 pre { white-space: pre-wrap;}
