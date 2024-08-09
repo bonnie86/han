@@ -1,0 +1,19 @@
+<svg id="bullet_point" data-name="bullet point" xmlns="http://www.w3.org/2000/svg" width="55.968" height="36" viewBox="0 0 18.656 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffa800;
+      }
+
+      .cls-1, .cls-2 {
+        mix-blend-mode: multiply;
+      }
+
+      .cls-2 {
+        fill: #ffd117;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="6" cy="6" r="6"/>
+  <circle class="cls-2" cx="12.656" cy="6" r="6"/>
+</svg>
