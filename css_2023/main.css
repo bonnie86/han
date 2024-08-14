@@ -68,7 +68,6 @@
     animation-duration: 0.6s; 
 }
 
-
 .main_visual .reset-animation .txt_box { 
     transform: translateY(20%);
     opacity: 0; 
@@ -81,29 +80,42 @@
 .controller .slick-dots-container,
 .controller .slick-arrows-container,
 .controller .custom-arrows-container { display: flex; gap: 10px;}
-
 .controller .slick-dots-container { order: 1;}
 .controller .slick-dots { position: absolute; width: 7.5rem; height: 0.125rem; top: 50%; left: 10%; transform: translateY(-50%); text-align: center; z-index: 5;}
 .controller .slick-dots li { display: inline-block;}
-.controller .slick-dots li button { width: 2.5rem; height: 0.125rem; background: rgba(199, 199, 199, 1); text-indent: -9999px; overflow: hidden; vertical-align: text-top;}
-.controller .slick-dots li.slick-active button:before { content: ""; position: absolute; font-size: 0; top: 0; left: 0; z-index: 20; opacity: 1; background: rgba(31, 31, 31, 1); transition: width 1.26s ease-in-out;}
-.controller .slick-dots li.slick-active:nth-child(1) button:before { width: 2.5rem; transform-origin: 2.5rem 0%;}
-.controller .slick-dots li.slick-active:nth-child(2) button:before { width: 5rem; transform-origin: 5rem 0%;}
-.controller .slick-dots li.slick-active:nth-child(3) button:before { width: 7.5rem; transform-origin: 7.5rem 0%;}
-@keyframes indi {
-    0% { width: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 1; }
+.controller .slick-dots li button { width: 2.5rem; height: 0.125rem; background: rgba(199, 199, 199, 1); text-indent: -9999px; overflow: hidden; vertical-align: text-top; position: relative;}
+.controller .slick-dots li.slick-active button:before { content: ""; position: absolute; top: 0; left: 0; z-index: 20; opacity: 1; background: rgba(31, 31, 31, 1); transition: width 1.26s ease-in-out;}
+.controller .slick-dots li.slick-active:nth-child(1) button:before { width: 2.5rem; height: 0.188rem; transform-origin: 2.5rem 0%; animation: indi1 1.26s 1s ease-in-out both;}
+.controller .slick-dots li.slick-active:nth-child(2) button:before { width: 5rem; height: 0.188rem; transform-origin: 5rem 0%; animation: indi2 1.26s 1s ease-in-out both;}
+.controller .slick-dots li.slick-active:nth-child(3) button:before { width: 7.5rem; height: 0.188rem; transform-origin: 7.5rem 0%; animation: indi3 1.26s 1s ease-in-out both;}
+
+@keyframes indi1 {
+    0% { width: 0rem; }
+    50% { width: 2.5rem; opacity: 1; }
+    100% { opacity: 1; width: 2.5rem; }
 }
+
+@keyframes indi2 {
+    0% { width: 2.5rem; }
+    50% { width: 5rem; opacity: 1; }
+    100% { opacity: 1; width: 5rem; }
+}
+
+@keyframes indi3 {
+    0% { width: 5rem; }
+    50% { width: 7.5rem; opacity: 1; }
+    100% { opacity: 1; width: 7.5rem; }
+}
+
 
 .controller .slick-arrows-container { order: 2; position: absolute; top: 50%; left: 60%; transform: translateY(-50%); z-index: 5;}
 .controller .slick-arrows-container .slick-prev,
 .controller .slick-arrows-container .slick-next { width: 20px; height: 20px; background-size: auto; text-indent: -9999px; overflow: hidden;}
-.controller .slick-arrows-container .slick-prev { background: url(../img/main/mv_arrow_left.svg) no-repeat;}
-.controller .slick-arrows-container .slick-next { background: url(../img/main/mv_arrow_right.svg) no-repeat;}
+.controller .slick-arrows-container .slick-prev { background: url(../img/main/mv_arrow_left.svg) no-repeat left 50%;}
+.controller .slick-arrows-container .slick-next { background: url(../img/main/mv_arrow_right.svg) no-repeat right 50%;}
 
 .controller .custom-arrows-container { order: 3;}
-.controller .custom-arrows-container.custom-arrows { position: absolute; top: 50%; right: 10%; width: 20px; height: 20px; transform: translateY(-50%); transition: all 0.2s ease; z-index: 5;}
+.controller .custom-arrows-container.custom-arrows { position: absolute; top: 50%; right: 10%; width: 20px; height: 20px; transform: translateY(-50%); transition: all 0.2s ease; z-index: 5; display: block; text-align: center; vertical-align: baseline; }
 .controller .custom-arrows-container.custom-arrows .pause,
 .controller .custom-arrows-container.custom-arrows .play { width: 1rem; height: 1.125rem; text-indent: -9999px; overflow: hidden;}
 .controller .custom-arrows-container.custom-arrows .pause { background: url(../img/main/mv_arrow_pause.svg) no-repeat 50% 50%; background-size: contain;}
@@ -198,7 +210,8 @@
 @media (max-width: 1024px) {
     
     .main_visual .txt_box { padding: 0 40px; left: 5%; top: 15%; }
-    .main_visual .txt_box strong { font-size: 2rem; }
+    .main_visual .txt_box strong,
+    .main_visual .txt_box strong span { font-size: 1.5rem; }
     .main_visual .txt_box > span,
     .main_visual .txt_box > p { font-size: 1rem; }
     .main_visual .txt_box > button { padding: 10px 24px; font-size: 0.75rem; }
