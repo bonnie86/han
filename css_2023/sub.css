@@ -305,7 +305,7 @@ img { border-radius: 2.5rem}
     .IntvwBg .inner .IntvwTit:before { width: 12%; }
     
     .sub_footer { margin: 40px auto 0;}
-    .article_related {     margin: 80px auto;}
+    .article_related { margin: 40px auto;}
     .page_navi { flex-wrap: wrap; flex-direction: column; gap: 20px;}
     .article_related .related_list { flex-direction: column; }
 }
