@@ -295,8 +295,9 @@
                 pauseOnHover: true,
                 pauseOnFocus: true,
                 appendDots: $('.slick-dots-container'),
-                prevArrow: $('.slick-arrows-container').append('<button class="slick-prev">Prev</button>'),
-                nextArrow: $('.slick-arrows-container').append('<button class="slick-next">Next</button>')
+                prevArrow: '<button class="slick-prev">Prev</button>',
+                nextArrow: '<button class="slick-next">Next</button>',
+                appendArrows: $('.slick-arrows-container')
             });
 
             $('.pause').on('click', function() {
