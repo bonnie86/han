@@ -114,10 +114,9 @@
     100% { opacity: 1; width: 7.5rem; }
 }
 
-.controller .slick-arrows-container { order: 2;}
-.controller .slick-arrows-container.slick-arrow { position: absolute; top: 50%; transform: translateY(-50%); left: 60%; margin: 0 5px; z-index: 5;}
-.controller .slick-arrows-container.slick-arrow .slick-prev { width: 20px; height: 20px; left: auto; background: url(../img/main/mv_arrow_left.svg) 0 0 no-repeat; background-size: auto; text-indent: -9999px; overflow: hidden;}
-.controller .slick-arrows-container.slick-arrow .slick-next { width: 20px; height: 20px; right: auto; background: url(../img/main/mv_arrow_right.svg) 0 0 no-repeat; background-size: auto; text-indent: -9999px; overflow: hidden;}
+.controller .slick-arrows-container { order: 2; position: absolute; top: 50%; transform: translateY(-50%); left: 60%; margin: 0 5px; z-index: 5;}
+.controller .slick-arrows-container .slick-prev { width: 20px; height: 20px; left: auto; background: url(../img/main/mv_arrow_left.svg) 0 0 no-repeat; background-size: auto; text-indent: -9999px; overflow: hidden;}
+.controller .slick-arrows-container .slick-next { width: 20px; height: 20px; right: auto; background: url(../img/main/mv_arrow_right.svg) 0 0 no-repeat; background-size: auto; text-indent: -9999px; overflow: hidden;}
 
 .controller .custom-arrows-container { order: 3;}
 .controller .custom-arrows-container.custom-arrows { position: absolute; top: 50%; transform: translateY(-50%); right: 10%; width: 1rem; height: 1.125rem; transition: all 0.2s ease; z-index: 5;}
