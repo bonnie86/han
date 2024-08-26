@@ -295,7 +295,7 @@ img { border-radius: 2.5rem}
     
     
     .sub_header .inner { justify-content: center; flex-wrap: wrap;}
-    .sub_header .sub_title { width: 100%; display: flex; flex-flow: column; align-items: flex-start; justify-content: center; padding: 20px;}
+    .sub_header .sub_title { width: 100%; display: flex; flex-flow: column; align-items: flex-start; justify-content: center; padding: 52px 20px 28px 20px;;}
     
     
     .sec { padding: 2rem 2.5rem;}
