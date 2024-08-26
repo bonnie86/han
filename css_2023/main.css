@@ -252,7 +252,7 @@
      
     
     .slick-slide { height: 25rem;}
-    .main_visual picture, .main_visual picture img { height: 25rem;}
+    .main_visual picture, .main_visual picture img { height: 25rem; }
     .boxwrap .banner01 a:after, .boxwrap .banner02 a:after {  background-size: 80%; }
     .boxwrap .banner a { padding: 36px 0;}
     .boxwrap .banner .txt { font-size: 1.25rem; margin-right: 0; padding: 0 0 0 28px;}
@@ -275,6 +275,7 @@
 
 }
 @media (max-width: 520px) {
+ .main_visual picture img { object-position: -16rem 0;}
 
     
 }
