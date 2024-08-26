@@ -228,7 +228,7 @@
 /* 모바일 스타일 */
 @media (max-width: 960px) {
     
-    .main_visual .txt_box { padding: 0 20px; left: 5%; top: 10%; }
+    .main_visual .txt_box { padding: 0 20px; left: 5%; top: 10%; text-shadow: 0 -1px 1px rgba(51, 51, 51, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.1); }
     .main_visual .txt_box strong,.main_visual .txt_box > span  { font-size: 1.5rem; }
     .main_visual .txt_box > p { font-size: 0.875rem; }
     .main_visual .txt_box > button { padding: 8px 20px; font-size: 0.75rem; }
