@@ -21,22 +21,22 @@ Header Inner
 #header, #main { position: relative; width: 100%; box-sizing: border-box;}
 #header .header_wrap { background-color: rgba(255, 255, 255, 1); position:fixed; left: 0; top: 0; z-index: 14; width: 100%; padding: 0 1.25rem; text-align: center; transition: top 0.3s; box-shadow: 0 0.5rem 1.75rem rgba(0, 0, 0, 0.2); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
 #header .header_wrap > .inner { width: 100%; max-width: 1700px; margin: 2.25rem auto; position: relative; z-index: 10; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; height: 50px;}
-#header a.ml { position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: auto; max-width: 205px; z-index: 2; height: 50px;}
-#header a.mi h1 { width: auto; max-width: 194px;}
-#header a.mi  h1 img { width: 100%; display: block;}
-#header a.logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: auto; max-width: 88px; z-index: 2; height: 50px;}
-#header a.logo h1 { width: auto; max-width: 88px;}
-#header a.logo  h1 img { width: 100%; display: block;}
+#header .inner aside .mi { position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: auto; max-width: 205px; z-index: 2; height: 50px;}
+#header .inner aside .mi h1 { width: auto; max-width: 194px;}
+#header .inner aside .mi  h1 img { width: 100%; display: block;}
+#header .inner aside strong.month_cont { position: absolute; margin: 0 0 0 220px; font-weight: 600; color: #ffa800; font-size:1.25rem; line-height: 1.3;}
+#header .inner aside strong.month_cont span { font-weight: 400; color: #1f1f1f; font-size:1rem;}
+#header .inner .logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: auto; max-width: 88px; z-index: 2; height: 50px;}
+#header .inner .logo h1 { width: auto; max-width: 88px;}
+#header .inner .logo h1 img { width: 100%; display: block;}
 
-#header strong.month_cont { position: absolute; margin: 0 0 0 220px; font-weight: 600; color: #ffa800; font-size:1.25rem;}
-#header strong.month_cont span { font-weight: 400; color: #1f1f1f; font-size:1rem;}
 
 /*
 ============================
 Global Navigation Bar / Hambuger Btn Event
 ============================
 */
-.hambuger { width: 34px; height: 34px;}
+.hambuger { position: absolute; right: 0;width: 36px; height: 36px; display: flex; justify-content: center; align-items: center;}
 .hambuger_btn { position: relative; width: 30px; height: 24px; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; margin: 10px 0; box-sizing: border-box; transition: all .3s; z-index: 60; }
 .hambuger_btn span { position: absolute; display: block; box-sizing: border-box; height: 2px; background-color: #1f1f1f; transition: 0.5s ease; z-index: 12;}
 .hambuger_btn span:nth-of-type(1) { top: 0; width: 28px}
@@ -120,7 +120,7 @@ Footer
 Top BTN Scroll
 ============================
 */
-.top_btn_wrap { width: 2.75rem; height: 2.75rem; position: fixed; bottom: 4.25rem; right: 4.25rem; background: #ffa800; box-shadow: 0px 12px 16px 4px rgba(000, 000, 000, .06); border-radius: 100px; z-index: 999; transition: all 0.3s, transform cubic-bezier(0.5, 0, 0.5, 1) 0.3s;; opacity: 0; display: flex; justify-content: center; align-items: center; cursor:pointer}
+.top_btn_wrap { width: 2.75rem; height: 2.75rem; position: fixed; bottom: 4.25rem; right: 2.5rem; background: #ffa800; box-shadow: 0px 12px 16px 4px rgba(000, 000, 000, .06); border-radius: 100px; z-index: 999; transition: all 0.3s, transform cubic-bezier(0.5, 0, 0.5, 1) 0.3s;; opacity: 0; display: flex; justify-content: center; align-items: center; cursor:pointer}
 button.scroll_btn img { border-radius: none;}
 .top_btn_wrap.active { opacity: 1; transition: all 0.3s, transform cubic-bezier(0.5, 0, 0.5, 1) 0.3s;}
 .top_btn_wrap:hover { background: #ffeac2; border-radius: 4px;  box-shadow: 0px 12px 24px 4px rgba(000, 000, 000, .08); transition: all 0.3s, transform cubic-bezier(0.5, 0, 0.5, 1) 0.3s;}
@@ -137,7 +137,7 @@ button.scroll_btn img { border-radius: none;}
    
 /* 태블릿 스타일 */
 @media (max-width: 1440px) {
-    .frame_pc  { display:none !important;}
+    
     .frame_tab { display:block !important;}
     .hambuger_menu { width: auto; } 
     .hambuger_menu .hambuger_nav { left: 6.25rem;}
@@ -147,18 +147,15 @@ button.scroll_btn img { border-radius: none;}
 }
 
 /* 태블릿 스타일 */
+@media (min-width: 961px) and (max-width: 1280px) {
+    .frame_mob { display:none !important;}
+}
 @media (max-width: 1280px) {
-    
-    
-    #header .header_wrap > .inner { margin: 1.5rem auto; align-items: flex-start;}
-    #header a.mi h1 { width: 56%; }
-    #header strong.month_cont { margin: 32px 0 0 0;}
-    
 
-    
+    #header .header_wrap > .inner { margin: 1.5rem auto; padding: 2rem 0.5rem;}
+    #header .inner aside .mi h1 { width: 50%; }
+    #header strong.month_cont { margin: 8px 0 0 0;}
 
-
-    
 }
 
 
@@ -176,12 +173,15 @@ button.scroll_btn img { border-radius: none;}
     
     .main_visual .slick-arrow.slick-next { background-size: 1.75rem;} 
 
-
-
 }
 
 /* 태블릿 스타일 */
 @media (max-width: 960px) {
+    .frame_mob { display:block !important;}
+    
+    #header .inner aside strong.month_cont { font-size: 1.125rem;}
+
+  
     .footer .footer_wrap {max-width: 1680px;padding: 4rem 1.25rem 8rem;margin: 0 auto;display: flex;font-family: "Montserrat", "Pretendard", "NotoSansKR", sans-serif;flex-direction: column;align-items: center;}
     .footer .footer_wrap .site_info { margin: 0; padding: 0.75rem 1rem;line-height: 1.2;letter-spacing: 0.04rem;display: flex;flex-wrap: wrap;justify-content: center;color: #999;font-size: 1.125rem;}
     .footer .footer_wrap .site_info address { display: flex; flex-wrap: wrap; flex-direction: column; justify-content: flex-start; color: #999; font-size: 1.125rem; }
@@ -215,7 +215,7 @@ button.scroll_btn img { border-radius: none;}
 
 @media (max-width: 641px) {
     
-        .frame_pc  { display:none !important;}
+    .frame_pc  { display:none !important;}
     .frame_tab { display:none !important;}
     .frame_mob { display:block !important;}
 }
@@ -228,7 +228,8 @@ button.scroll_btn img { border-radius: none;}
 
 /* 모바일 스타일 */
 @media (max-width: 480px) {
-    
+    #header .inner .logo h1 { width: auto; max-width: 78px;}
+    #header .inner aside strong.month_cont { display: flex; flex-direction: column; flex-wrap: wrap; align-items: flex-start;}
     
 }
 
