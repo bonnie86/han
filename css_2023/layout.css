@@ -154,7 +154,7 @@ button.scroll_btn img { border-radius: none;}
 
     #header .header_wrap > .inner { margin: 1.5rem auto; padding: 2rem 0.5rem;}
     #header .inner aside .mi h1 { width: 50%; }
-    #header strong.month_cont { margin: 8px 0 0 0;}
+    #header .inner aside strong.month_cont { margin: 8px 0 0 0;}
 
 }
 
