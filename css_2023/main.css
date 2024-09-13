@@ -231,7 +231,7 @@
     .main_visual .txt_box > p { font-size: 1rem; }
     .main_visual .txt_box > button { padding: 10px 24px; font-size: 0.75rem; }
 
-    .post03 .postItem a .desc { padding: 48px 32px 42px;}
+    .post03 .postItem a .desc { padding: 40px 32px 42px;}
     
     .boxwrap .banner a { padding: 46px 0;}
     .boxwrap .banner01 a:after, .boxwrap .banner02 a:after { background-size: 80%; right: 0px; }
@@ -261,7 +261,7 @@
     .post02 .postItem .desc { height: auto;}
     .post03 .postItem a{ flex-direction: column;}
     .post03 .postItem a .pic { width: 100%;}
-    .post03 .postItem a .desc { width: 100%; padding: 40px 32px 52px;}
+    .post03 .postItem a .desc { width: 100%;}
     .post03 .postItem a .desc p { font-size: 1.25rem; margin-top: 1.5rem;}
     .boxwrap { flex-direction: column; gap: 3.75rem 0;}
     .boxwrap .banner { width: 100%;}
