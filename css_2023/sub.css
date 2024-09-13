@@ -183,6 +183,7 @@ img { border-radius: 2.5rem;}
 
 /* 태블릿 스타일 */
 @media (max-width: 1440px) {
+    .frame_tab { display:block !important;}
     .sec { padding: 0 2.5rem}
     .labelWrap { padding: 0 2.5rem;}
     .IntvwBg .inner { padding: 0 2.5rem;}
