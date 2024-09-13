@@ -321,6 +321,12 @@
 @media (max-width: 375px) {
     .frame_pc { display:block;} 
     .desc span { margin-bottom: 0.875rem;}
+    .desc strong, .desc strong> span { font-size: 1.375rem; }
+    .postItem > a:hover > .desc strong, .postItem > a:hover > .desc strong> span
+    { font-size: 1.375rem; }
+    .postItem .desc { padding: 1.25em;}
+    .post02 .postItem .desc { padding: 1.5rem 1.25rem 1.75rem;}
+
     
 
 }
