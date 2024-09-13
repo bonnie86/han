@@ -330,3 +330,8 @@
     
 
 }
+@media (max-width: 320px) {
+    .frame_pc { display:none;} 
+    
+
+}
