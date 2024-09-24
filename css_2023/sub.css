@@ -1,5 +1,7 @@
 @charset "UTF-8";
 br.pc { display: block;}
+br.mobxsB { display:none;}
+br.mobxsN { display: block;}
 
 /*패딩*/
 .pt0 						{ padding-top:0;}
