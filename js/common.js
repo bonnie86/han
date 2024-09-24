@@ -1,46 +1,50 @@
 $(function() {
-    var $burger = $('.hambuger_btn');
-    var $hamburgerMenu = $('.hambuger_menu');
-    var $wrap = $('#wrap');
-    var $topBtn = $('.top_btn_wrap');
-    var $headerWrap = $('.header_wrap');
+    // 요소 선택자 초기화
+    var $burger = $('.hambuger_btn'); // 햄버거 버튼
+    var $hamburgerMenu = $('.hambuger_menu'); // 햄버거 메뉴
+    var $wrap = $('#wrap'); // 전체 래핑 요소
+    var $topBtn = $('.top_btn_wrap'); // 상단으로 이동 버튼
+    var $headerWrap = $('.header_wrap'); // 헤더 래핑 요소
     var $mainContainer = $('.main'); // 메인 비주얼 선택자
-    var menuVisible = false;
-    var rollHeader = 100;
+    var menuVisible = false; // 메뉴 표시 여부
+    var rollHeader = 100; // 헤더 고정 기준 스크롤 위치
 
-    // 페이지 로드 시 초기 높이 조정
+    // 초기 설정: 페이지 로드 시 높이 및 여백 조정
     adjustPortfolioHeight();
     adjustMainVisualPadding();
 
+    // 햄버거 버튼 클릭 시 메뉴 토글
     $burger.on('click', function(e) {
         e.preventDefault();
         toggleMenu();
     });
 
+    // 윈도우 리사이즈 시 메뉴 상태 및 높이 조정
     $(window).on('resize', function() {
         if ($(window).width() > 1200 && menuVisible) {
             closeMenu();
         }
-        adjustPortfolioHeight(); // 높이 조정
+        adjustPortfolioHeight(); // 포트폴리오 높이 조정
         adjustMainVisualPadding(); // 메인 비주얼 여백 조정
     });
 
+    // 스크롤 이벤트 처리
     $(window).on('scroll', function() {
-        var scroll = getCurrentScroll();
-        var headerHeight = $headerWrap.height();
+        var scroll = getCurrentScroll(); // 현재 스크롤 위치
+        var headerHeight = $headerWrap.height(); // 헤더 높이
 
         // 헤더 고정 클래스 토글
         $headerWrap.toggleClass('fixnav', scroll >= rollHeader);
-        adjustMainVisualPadding();
+        adjustMainVisualPadding(); // 여백 조정
 
-        // Top Button 표시 및 hover 상태 관리
+        // Top Button 표시 및 활성화 상태 관리
         if (scroll > 150) {
-            $topBtn.addClass("active").fadeIn();
+            $topBtn.addClass("active").fadeIn(); // 스크롤 150 이상 시 버튼 표시
         } else {
-            $topBtn.removeClass("active").fadeOut();
+            $topBtn.removeClass("active").fadeOut(); // 그렇지 않으면 숨김
         }
 
-        // 스크롤 중일 때 hover 해제
+        // 스크롤 중일 때 hover 상태 해제
         if (scroll > 0) {
             $topBtn.parent('.top_btn_wrap').removeClass('hover');
         } else {
@@ -48,15 +52,16 @@ $(function() {
         }
     });
 
+    // Top Button 클릭 시 부드럽게 스크롤
     $topBtn.on('click', function() {
         $(this).removeClass('active'); // active 클래스 제거
         $topBtn.parent('.top_btn_wrap').removeClass('active hover'); // active와 hover 클래스 제거
 
-        // 부드럽게 스크롤 0으로 애니메이션
+        // 스크롤을 0으로 애니메이션
         $('html, body').animate({ scrollTop: 0 }, 300);
     });
 
-    // 마우스 오버 이벤트 추가
+    // Top Button 마우스 오버 이벤트 처리
     $topBtn.on('mouseenter', function() {
         $topBtn.parent('.top_btn_wrap').addClass('hover'); // hover 클래스 추가
     }).on('mouseleave', function() {
@@ -65,28 +70,31 @@ $(function() {
         }
     });
 
+    // 메뉴 닫기 함수
     function closeMenu() {
-        $hamburgerMenu.removeClass('active');
-        $wrap.removeClass('on');
-        $burger.removeClass('active');
-        menuVisible = false;
+        $hamburgerMenu.removeClass('active'); // 메뉴 비활성화
+        $wrap.removeClass('on'); // 래핑 요소 비활성화
+        $burger.removeClass('active'); // 햄버거 버튼 비활성화
+        menuVisible = false; // 메뉴 상태 업데이트
     }
 
+    // 메뉴 토글 함수
     function toggleMenu() {
-        $burger.toggleClass('active');
-        $hamburgerMenu.toggleClass('active');
-        $wrap.toggleClass('on');
-        menuVisible = !menuVisible;
+        $burger.toggleClass('active'); // 햄버거 버튼 상태 토글
+        $hamburgerMenu.toggleClass('active'); // 메뉴 상태 토글
+        $wrap.toggleClass('on'); // 래핑 요소 상태 토글
+        menuVisible = !menuVisible; // 메뉴 표시 여부 업데이트
     }
 
+    // 현재 스크롤 위치 반환 함수
     function getCurrentScroll() {
-        return window.pageYOffset || document.documentElement.scrollTop;
+        return window.pageYOffset || document.documentElement.scrollTop; // 스크롤 위치
     }
 
-    // 메인 컨텐츠를 헤더 높이에 맞추어 조정하는 함수
+    // 메인 컨텐츠의 여백 조정 함수
     function adjustMainVisualPadding() {
-        var headerHeight = $headerWrap.outerHeight();
-        $mainContainer.css('padding-top', headerHeight + 'px');
+        var headerHeight = $headerWrap.outerHeight(); // 헤더 높이
+        $mainContainer.css('padding-top', headerHeight + 'px'); // 메인 여백 조정
     }
 
     // 초기화 함수: 포트폴리오 높이 조정
