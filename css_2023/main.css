@@ -84,7 +84,6 @@
 }
 
 
-
 .controller { background: #fff; width: 260px; height: 60px; position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 1; padding: 10px; display: flex; justify-content: space-between; align-items: center;}
 .controller .slick-dots-container,
 .controller .slick-arrows-container,
@@ -93,10 +92,12 @@
 .controller .slick-dots { position: absolute; width: 7.5rem; height: 0.125rem; top: 50%; left: 10%; transform: translateY(-50%); text-align: center; z-index: 5;}
 .controller .slick-dots li { display: inline-block;}
 .controller .slick-dots li button { width: 2.5rem; height: 0.125rem; background: rgba(199, 199, 199, 1); text-indent: -9999px; overflow: hidden; vertical-align: text-top; position: relative;}
-.controller .slick-dots li.slick-active button:before { content: ""; position: absolute; top: 0; left: 0; z-index: 20; opacity: 1; background: rgba(31, 31, 31, 1); transition: width 1.26s ease-in-out;}
-.controller .slick-dots li.slick-active:nth-child(1) button:before { width: 2.5rem; height: 0.188rem; transform-origin: 2.5rem 0%; animation: indi1 1.26s 1s ease-in-out both;}
-.controller .slick-dots li.slick-active:nth-child(2) button:before { width: 5rem; height: 0.188rem; transform-origin: 5rem 0%; animation: indi2 1.26s 1s ease-in-out both;}
-.controller .slick-dots li.slick-active:nth-child(3) button:before { width: 7.5rem; height: 0.188rem; transform-origin: 7.5rem 0%; animation: indi3 1.26s 1s ease-in-out both;}
+.controller .slick-dots li.slick-active button:before { height: 0.188rem; content: ""; position: absolute; top: 0; left: 0; z-index: 20; opacity: 1; background: rgba(31, 31, 31, 1);}
+.controller .slick-dots li.slick-active:nth-child(1) button:before { width: 2.5rem; transform-origin: 2.5rem 0%; animation: indi1 1.26s ease-in-out both;}
+.controller .slick-dots li.slick-active:nth-child(2) button:before { width: 5rem; transform-origin: 5rem 0%; animation: indi1 1.26s ease-in-out both;}
+.controller .slick-dots li.slick-active:nth-child(3) button:before { width: 7.5rem; transform-origin: 7.5rem 0%; animation: indi1 1.26s ease-in-out both;}
+
+
 
 @keyframes indi1 {
     0% { width: 0rem; }
@@ -104,17 +105,6 @@
     100% { opacity: 1; width: 2.5rem; }
 }
 
-@keyframes indi2 {
-    0% { width: 2.5rem; }
-    50% { width: 5rem; opacity: 1; }
-    100% { opacity: 1; width: 5rem; }
-}
-
-@keyframes indi3 {
-    0% { width: 5rem; }
-    50% { width: 7.5rem; opacity: 1; }
-    100% { opacity: 1; width: 7.5rem; }
-}
 
 
 .controller .slick-arrows-container { order: 2; position: absolute; top: 50%; left: 60%; transform: translateY(-50%); z-index: 5;}
@@ -132,7 +122,6 @@
 .controller .custom-arrows-container.custom-arrows .pause:hover,
 .controller .custom-arrows-container.custom-arrows .play:hover { transition: all 0.08s ease;}
 
-
 .contents { width: 100%;  margin: 0 auto;} /*max-width: 1920px;*/
 .contents article { width: 100%; height: 100%;margin: 0 auto; position: relative; padding: 7.5rem 0;} /*max-width: 1920px;*/
 .contents article:nth-child(2) { background:#f7f7f7; }
@@ -148,7 +137,7 @@
 
 .postItem .desc { width: 100%; max-width: 100%; box-sizing: border-box; display: flex; justify-content: center; flex-direction: column; padding: 2rem; background-color: #fff; box-shadow: 0 0 0.375rem rgba(0,0,0,0.08); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); text-align: left; transition:all .5s; transform-origin: center; }
 .desc span { color: #ffa800; font-size: 1.375rem; margin-bottom: 2rem;}
-.desc strong { color: #2a2a2a; font-size: 1.75rem; line-height: 1.4; word-break: keep-all; word-wrap: break-word; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp:4; -webkit-box-orient: vertical;}
+.desc strong { color: #2a2a2a; font-size: 1.75rem; line-height: 1.4; word-break: auto-phrase; word-wrap: break-word; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp:4; -webkit-box-orient: vertical;}
 .desc strong> span { color: #2a2a2a; font-size: 1.75rem; line-height: 1.4; font-weight: 400;}
 
 .sec01_wrap, .sec02_wrap, .sec03_wrap { width: 100%; max-width: 1440px; text-align: center; margin: 0 auto; }
@@ -158,7 +147,7 @@
 .post01 .postItem:nth-child(2)  { margin-top:2.5rem; }
 
 .post02 .postItem { width: 29rem; margin: 0 auto; }
-.post02 .postItem .desc { width: calc(100% - 18%); max-width: 100%; height: 16.75rem; margin-top: -6.125rem; margin-left: 18%; box-sizing: border-box; display: flex; justify-content: flex-start; flex-direction: column; background-color: #fff; box-shadow: 0 0 0.375rem rgba(0,0,0,0.08); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); text-align: left; padding: 2.5rem 2rem 3.5rem;}
+.post02 .postItem .desc { width: calc(100% - 6.5rem); max-width: 100%; height: 16.75rem; margin-top: -6.125rem; margin-left: 6.5rem; box-sizing: border-box; display: flex; justify-content: flex-start; flex-direction: column; background-color: #fff; box-shadow: 0 0 0.375rem rgba(0,0,0,0.08); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); text-align: left; padding: 2.5rem 2rem 3.5rem;}
 .gap_p { display: block; font-size: 1.75rem; line-height: 1.4;}
 
 .post03 { }
@@ -205,7 +194,7 @@
 /* 태블릿 스타일 */
 @media (max-width: 1280px) {
 
-.post02 .postItem .desc { width: calc(100% - 10%); margin-left: 10%; margin-top: -4.25rem; padding: 2.5rem 2rem 3.5rem; }      
+.post02 .postItem .desc { width: calc(100% - 3.25rem); margin-left: 3.25rem; margin-top: -4.25rem; padding: 2.5rem 2rem 3.5rem; }      
 .post03 .postItem a .desc { height:  auto; padding: 92px 32px 88px;}
    
 }
@@ -243,7 +232,7 @@
 @media (max-width: 960px) {
     
     .main_visual .txt_box { padding: 0 20px; left: 5%; top: 10%; text-shadow: 0 -1px 1px rgba(51, 51, 51, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px 5px rgba(0, 0, 0, 0.05);}
-    .main_visual .txt_box strong,.main_visual .txt_box > span  { font-size: 1.5rem; }
+    .main_visual .txt_box strong, .main_visual .txt_box strong > span  { font-size: 1.5rem; }
     .main_visual .txt_box > p { font-size: 0.875rem; }
     .main_visual .txt_box > button { padding: 8px 20px; font-size: 0.75rem; }
 
@@ -286,10 +275,10 @@
 @media (max-width: 720px) {
 
     
-    .main_visual .txt_box { vertical-align: top;}
+    .main_visual .txt_box { vertical-align: top; left: 2.5%;}
     .main_visual .slick-active .txt_box { vertical-align: top;} 
     .main_visual_section .txt_box span { font-size: 1rem; margin-bottom: 0.75rem;}
-    .main_visual .txt_box strong,.main_visual .txt_box > span
+    .main_visual .txt_box strong, .main_visual .txt_box strong > span
     { font-size: 1.25rem; margin-bottom: 1rem;}
     .main_visual_section .txt_box p { font-size: 1rem; margin-bottom: 0.75rem;}
     .boxwrap .banner a { padding: 28px 0; }
@@ -315,7 +304,11 @@
     
 /* 모바일 스타일 */
 @media (max-width: 480px) {
+    
     #header strong.month_cont { display: flex; flex-wrap: wrap; flex-direction: column; align-items: flex-start;}
+    .contents article { padding: 3.75rem 1.5rem;}
+    .contents article:nth-child(4) { padding: 1.5rem 1.5rem 3.75rem;}
+    
     .boxwrap .banner01 a:after, .boxwrap .banner02 a:after { right: -45px; background-size: 55%;}
 
 }
@@ -327,7 +320,7 @@
 }
 /* 모바일 스타일 */
 @media (max-width: 375px) {
-
+    .frame_mo { display:none;}
     .desc span { font-size: 0.875rem; margin-bottom: 0.875rem;}
     .desc strong, .desc strong> span { font-size: 1.375rem; }
     .postItem > a:hover >.desc span { font-size: 0.875rem; margin-bottom: 0.875rem;}
@@ -341,6 +334,6 @@
 }
 
 @media (max-width: 320px) {
-
+    
 
 }
