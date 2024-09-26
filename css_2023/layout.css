@@ -214,7 +214,7 @@ button.scroll_btn img { border-radius: none;}
 /* 모바일 스타일 */
 @media  (max-width: 525px) {
     #header .inner aside .mi { width: 70%;}
-    #header .inner .logo { width: 70%;}    
+    #header .inner .logo { width: 50%;}    
  
 }
 
@@ -222,7 +222,7 @@ button.scroll_btn img { border-radius: none;}
 /* 모바일 스타일 */
 @media (max-width: 480px) {
     #header .inner aside .mi { width: 60%;}
-    #header .inner .logo { width: 60%;} 
+    #header .inner .logo { width: 40%;} 
     .footer .footer_wrap .site_info address span:last-child br.mob { display: block;}
     
 }
@@ -230,7 +230,7 @@ button.scroll_btn img { border-radius: none;}
 /* 모바일 스타일 */
 @media (max-width: 425px){
     #header .inner aside .mi { width: 50%;}
-    #header .inner .logo { width: 50%;} 
+    #header .inner .logo { width: 30%;} 
     
 
 }
