@@ -206,12 +206,9 @@ button.scroll_btn img { border-radius: none;}
     */
     .top_btn_wrap {  bottom: 1.75rem; right: 1.75rem;}
     
-  
-
 }
 
 @media (max-width: 641px) {
-
 }
 
 /* 모바일 스타일 */
@@ -224,7 +221,6 @@ button.scroll_btn img { border-radius: none;}
 /* 모바일 스타일 */
 @media (max-width: 480px) {
     #header .inner aside .mi { width: 60%;}
-
     .footer .footer_wrap .site_info address span:last-child br.mob { display: block;}
     
 }
@@ -234,4 +230,8 @@ button.scroll_btn img { border-radius: none;}
     #header .inner aside .mi { width: 50%;}
     
 
+}
+/* 모바일 스타일 */
+@media (max-width: 375px){
+    #header strong.month_cont { display: flex; flex-wrap: wrap; flex-direction: column; align-items: flex-start;}
 }
