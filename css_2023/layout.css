@@ -213,7 +213,8 @@ button.scroll_btn img { border-radius: none;}
 
 /* 모바일 스타일 */
 @media  (max-width: 525px) {
-#header .inner aside .mi { width: 70%;}
+    #header .inner aside .mi { width: 70%;}
+    #header .inner .logo { width: 70%;}    
  
 }
 
