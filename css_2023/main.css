@@ -152,7 +152,7 @@
 
 .post03 { }
 .post03 .postItem { width: 100%; max-width: 1440px; margin: 0 auto;  }
-.post03 .postItem a { width: 100%; max-width: 1440px; margin: 0 auto; display: flex; justify-content: space-evenly; flex-wrap: nowrap; align-items: center;}
+.post03 .postItem a { width: 100%; max-width: 1440px; margin: 0 auto; display: flex; justify-content: space-evenly; flex-wrap: nowrap; align-items: center; align-items: stretch;}
 .post03 .postItem a .pic { width: 702px; max-width: 100%;}
 .post03 .postItem a .desc { width: 738px; max-width: 100%; padding: 134px 32px 125px;}
 .post03 .postItem a .desc p { font-size: 2rem; font-weight: 400; color: #434343; margin-top: 3rem; }
